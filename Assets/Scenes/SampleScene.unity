@@ -970,6 +970,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1710853442}
   - component: {fileID: 1710853443}
+  - component: {fileID: 1710853445}
+  - component: {fileID: 1710853444}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1005,10 +1007,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd643b6385c74e24c9848ca6506bc7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 350
   CameraAxisTransform: {fileID: 1104879627}
   minAngle: -30
   maxAngle: 15
+  RotationSpeed: 250
+--- !u!143 &1710853444
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710853441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.8
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1710853445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710853441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0522ba54fca011c4b98ab8208e5b0209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravity: 9.8
 --- !u!1 &1900611354
 GameObject:
   m_ObjectHideFlags: 0
