@@ -20,9 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         _moveVector = Vector3.zero;
-
         if(Input.GetKey(KeyCode.W))
         {
             _moveVector += transform.forward;
@@ -43,25 +41,27 @@ public class PlayerController : MonoBehaviour
             _moveVector -= transform.right;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
+        if(Input.GetKey(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -jumpForce;
         }
-
     }
 
     void FixedUpdate()
     {
-
+        // Movement
         _characterController.Move(_moveVector * Time.fixedDeltaTime * speed);
 
+        // Fall and jump
         _fallVelocity += gravity * Time.fixedDeltaTime;
         _characterController.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
 
+        // Stop fall if on the ground
         if(_characterController.isGrounded)
         {
             _fallVelocity = 0;
         }
 
     }
+
 }
