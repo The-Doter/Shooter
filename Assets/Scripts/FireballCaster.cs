@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireballCaster : MonoBehaviour
 {
+    public float damage = 10f;
 
     public Transform FireballSourceTransform;
     public Fireball fireballPrefab;
@@ -11,7 +12,8 @@ public class FireballCaster : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Instantiate(fireballPrefab, FireballSourceTransform.position, FireballSourceTransform.rotation);
+            var fireball = Instantiate(fireballPrefab, FireballSourceTransform.position, FireballSourceTransform.rotation);
+            fireball.damage = damage;
         }
     }
 }

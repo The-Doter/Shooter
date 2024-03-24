@@ -5,6 +5,12 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float value = 100f;
+    public PlayerProgress playerProgress;
+
+    void Start()
+    {
+        playerProgress = FindObjectOfType<PlayerProgress>();
+    }
 
     public void DealDamage(float damage)
     {
@@ -13,5 +19,6 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        playerProgress.AddExperience(damage);
     }
 }

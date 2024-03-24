@@ -281,6 +281,11 @@ PrefabInstance:
       propertyPath: valueRectTransform
       value: 
       objectReference: {fileID: 111174591}
+    - target: {fileID: 6351860833580826225, guid: 1b87e83939f5e0e44a338cbfb76a9d94,
+        type: 3}
+      propertyPath: levels.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8024052755346542649, guid: 1b87e83939f5e0e44a338cbfb76a9d94,
         type: 3}
       propertyPath: m_RootOrder
@@ -826,6 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 100
+  playerProgress: {fileID: 0}
 --- !u!1 &692675361
 GameObject:
   m_ObjectHideFlags: 0
